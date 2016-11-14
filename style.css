@@ -9,22 +9,30 @@
 }
 
 
-.wrapper {
-	margin: 0 auto;
-	width: 1215px;
+html {
 	height: 1028px;
-	background-image: url('Layers/background/background.png');
+	width: 100%;
+	background: url('Layers/background/background.png') no-repeat center center fixed;
+	background-size: cover;
 }
 
 body {
 	font-family: 'Helvetica Neue', Tahoma, sans-serif;
 }
 
+.wrapper {
+	height: 1000px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+
+
 					/*HEADER*/             
 
 .header {
 	height: 36px;
-	width: 1215px;
+	width: 100%;
 	background-image: url('Layers/header/header_back.jpg');
 }
 
@@ -152,110 +160,62 @@ body {
 
 /*Facebook button*/
 
-.button_fb {
-	height: 100px;
-	width: 562px;
-	margin: 0 auto;
+.button_1 {
 	display: flex;
-    align-items: center;
-    justify-content: center; 
-    overflow: auto;
+	align-items: center;
+	justify-content: center;
+	height: 102px;
 }
 
-.fb_icon {
-	height: 36px;
-	width: 36px;
-	border-right: 1px solid #1f3c76;
-	background: #3c5597;
-	float: left;
-	vertical-align: middle;
-	line-height: 36px;
-	text-align: center;
-	border-top: 1px solid #798ab5;
-	border-top-left-radius: 3px;
-	border-bottom-left-radius: 3px;
-}
+.fb_button {
+	height: 35px;
+	width: 276px;
+	margin: auto;
+	background-image: url('Layers/background/fb_button.png');
+	border: 0px solid transparent;
+	border-radius: 5px;
+	cursor: pointer;
+}	
 
-.fb_icon>a {
-	text-decoration: none;
-	color: white;
-	font-size: 26px;
-	font-weight: bold;
-	display: block;
-	height: 100%;
-}
 
-.fb_icon:hover {
-	background-image: -webkit-linear-gradient(#3a559c, #354e8e, #2c4377);
-}
+/*Decoration text*/
 
-.fb_text {
-	height: 36px;
-	width: 240px;
-	background: #3c5597;
-	float: left;
-	vertical-align: middle;
-	line-height: 36px;
-	text-align: center;
-	border-top: 1px solid #798ab5;
-	border-left: 1px solid #798ab5;
-	border-top-right-radius: 3px;
-	border-bottom-right-radius: 3px;
-}
-
-.fb_text>a {
-	text-decoration: none;
-	color: white;
-	font-size: 15px;
-	display: block;
-	height: 100%;
-}
-
-.fb_text>a>span {
-	font-weight: bold;
-}
-
-.arrow {
-	font-size: 26px;
-}
-
-.fb_text:hover {
-	background-image: -webkit-linear-gradient(#3a559c, #354e8e, #2c4377);
-}
-
-/*Decoration (lines and text)*/
-
-.decoration {
-	height: 30px;
-	width: 562px;
-	margin: 0 auto;
-	display: flex;
-    align-items: center;
-    justify-content: center; 
-    overflow: auto;
-    margin-top: -10px;
-    
-}
-
-.line_1 {
-	height: 1px;
-	width: 122px;
-	border-top: 2px solid #666;
-	float: left;
-}
 
 .decoration_text {
-    float: left;
-    margin: 0px 5px;
+	height: 25px;
+  	text-align: center;
     color: #999;
+    line-height: 10px;
+    vertical-align: middle;
 }
 
-.line_2 {
-	height: 1px;
-	width: 122px;
-	border-top: 2px solid #666;
-	float: left;
+.ou {
+	position: relative;
+	font-size: 14px;
 }
+
+.ou:before {
+	content: '';
+	width: 123px;
+	border-top: 1px solid grey;
+	border-bottom: 1px solid black;
+	position: absolute;
+	top: 4px;
+	left: 144px;
+
+}
+
+.ou::after {
+	content: '';
+	width: 123px;
+	border-top: 1px solid grey;
+	border-bottom: 1px solid black;
+	position: absolute;
+	top: 4px;
+	left: 295px;
+	
+}
+
 
 
 /*Forms*/
@@ -282,6 +242,7 @@ body {
 	border-top: none;
 	border-left: none;
 	border-right: none;
+	color: white;
 }
 
 .first_name>input:focus {
@@ -303,6 +264,7 @@ body {
 	border-top: none;
 	border-left: none;
 	border-right: none;
+	color: white;
 }
 
 .last_name>input:focus {
@@ -324,7 +286,7 @@ body {
 	border-top: none;
 	border-left: none;
 	border-right: none;
-
+	color: white;
 }
 
 .email>input:focus {
@@ -346,6 +308,7 @@ body {
 	border-top: none;
 	border-left: none;
 	border-right: none;
+	color: white;
 }
 
 .password>input:focus {
@@ -367,6 +330,7 @@ body {
 	border-top: none;
 	border-left: none;
 	border-right: none;
+	color: white;
 }
 
 .confirm_password>input:focus {
@@ -393,32 +357,28 @@ body {
 
 /*Button*/
 
-.account_button {
+.button_2 {
+	height: 40px;
+	margin-top: 20px;
+	text-align: center;
+}
+
+.button_2 input {
 	height: 36px;
 	width: 150px;
 	background-color: #4299d2;
+	border: 0px solid transparent;
 	border-radius: 2px;
-	margin: 0 auto;
-	margin-top: 20px;
-    vertical-align: middle;
-    line-height: 36px;
-    text-align: center;
-    
-	
-}
-
-.account_button:hover {
-	background-image: -webkit-linear-gradient(#4eabda, #3f94d0, #3686ca);
-}
-
-.account_button>a {
-	text-decoration: none;
+	margin: auto;
 	color: white;
-    font-size: 14px;
-    font-weight: bold;
-    display: block;
-    height: 36px;
+	font-family: 'Helvetica Neue', Tahoma, sans-serif;
 }
+
+.button_2 input:hover {
+	background-image: -webkit-linear-gradient(#4eabda, #3f94d0, #3686ca);
+	cursor: pointer;
+}
+
 
 /*Text*/
 
